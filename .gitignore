@@ -21,3 +21,4 @@ src/test/resources/files/download
 .allure/
 allure-results/
 lib/
+out/
