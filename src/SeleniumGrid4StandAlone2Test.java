@@ -4,6 +4,7 @@ import org.openqa.selenium.MutableCapabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -17,10 +18,10 @@ public class SeleniumGrid4StandAlone2Test {
 
     @Test
     public void helloWorld() throws MalformedURLException {
-        InternetExplorerOptions options = new InternetExplorerOptions();
+        FirefoxOptions options = new FirefoxOptions();
 
         driver = new RemoteWebDriver(new URL("http://localhost:4444"),
-                new ImmutableCapabilities(options));
+                options);
 
         driver.get("https://www.google.com");
 
